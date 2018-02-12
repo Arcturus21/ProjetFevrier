@@ -5,7 +5,9 @@
 
 #include "Case.h"
 
+
 #define NB_CASE 10
+
 
 class Plateau : public sf::Drawable, public sf::Transformable
 {
@@ -34,7 +36,7 @@ class Plateau : public sf::Drawable, public sf::Transformable
     private:
         sf::VertexArray _vertices;
 
-        Case _plateau[NB_CASE][NB_CASE];
+        Case _plateau[][NB_CASE];
 };
 
 #endif // PLATEAU_H

@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "Plateau.h"
+#include "GameManager.h"
 
 using namespace std;
 
@@ -10,6 +11,8 @@ int main()
     sf::RenderWindow window(sf::VideoMode(TAILLE_CASE*NB_CASE, TAILLE_CASE*NB_CASE), "SFML works!");
 
     Plateau plateau;
+
+    GameManager gm;
 
     while (window.isOpen())
     {
@@ -21,7 +24,10 @@ int main()
         }
 
         window.clear();
+
         window.draw(plateau);
+        gm.AfficherPions(window);
+
         window.display();
     }
 

@@ -18,6 +18,8 @@ Plateau::Plateau() : _vertices(sf::Quads, 4*NB_CASE*NB_CASE)
             _vertices[indice+3].position = sf::Vector2f(i*TAILLE_CASE,(j+1)*TAILLE_CASE);
             _vertices[indice+3].color = couleur;
 
+            _plateau[i][j].init(i,j,couleur);
+
             if(couleur==sf::Color::Black)
                 couleur=sf::Color::White;
             else
