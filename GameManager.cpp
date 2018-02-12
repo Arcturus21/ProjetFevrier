@@ -8,7 +8,10 @@ GameManager::GameManager()
         for(int j=0+i%2;j<4;j+=2)
         {
             _listPionsBlancs.push_back(new Pion(i,j,TAILLE_CASE,sf::Color::White));
-            _listPionsNoirs.push_back(new Pion(i,NB_CASE-j,TAILLE_CASE,sf::Color::Black));
+        }
+        for(int j=NB_CASE-1-((i+1)%2);j>=NB_CASE-4;j-=2)
+        {
+            _listPionsNoirs.push_back(new Pion(i,j,TAILLE_CASE,sf::Color::Black));
         }
     }
 }
