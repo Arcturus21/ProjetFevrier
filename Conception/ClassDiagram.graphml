@@ -177,7 +177,6 @@ PionNoir
       </data>
     </node>
     <node id="n7">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="182.38696296296297" width="298.4432592592593" x="341.00252474074034" y="-427.4995168148149"/>
@@ -202,7 +201,6 @@ PionNoir
       </data>
     </node>
     <node id="n8">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="186.04425007407394" x="1674.3586797037028" y="-152.73747292592498"/>
@@ -220,7 +218,6 @@ PionNoir
       </data>
     </node>
     <node id="n9">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="186.04425007407394" x="1674.3586797037026" y="13.063698018519972"/>
@@ -238,7 +235,6 @@ PionNoir
       </data>
     </node>
     <node id="n10">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="186.04425007407394" x="1674.3586797037028" y="178.86486896296492"/>
@@ -256,7 +252,6 @@ PionNoir
       </data>
     </node>
     <node id="n11">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="80.45925925925928" width="115.78074074074061" x="1709.4904343703693" y="305.7877789074066"/>
@@ -274,7 +269,6 @@ PionNoir
       </data>
     </node>
     <node id="n12">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="186.04425007407394" x="1674.3586797037026" y="459.91832144444095"/>
@@ -292,13 +286,12 @@ PionNoir
       </data>
     </node>
     <node id="n13">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="65.32148148148156" width="108.02212503703731" x="1978.280853333332" y="453.8833940370335"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="90.70703125" x="8.657546893518656" y="23.31015480324072">Si case sur bord<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="90.70703125" x="8.657546893518656" y="23.310154803240778">Si case sur bord<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -310,7 +303,6 @@ PionNoir
       </data>
     </node>
     <node id="n14">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="186.04425007407394" x="2204.1809019259254" y="459.91832144444095"/>
@@ -328,7 +320,6 @@ PionNoir
       </data>
     </node>
     <node id="n15">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="65.32148148148156" width="108.02212503703731" x="1713.369742222221" y="607.7841347777743"/>
@@ -346,7 +337,6 @@ PionNoir
       </data>
     </node>
     <node id="n16">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="1453.1006008543136" y="625.4448755185151"/>
@@ -365,7 +355,6 @@ PionNoir
       </data>
     </node>
     <node id="n17">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="147.03318755555574" x="1693.8642109629618" y="-318.5386438703699"/>
@@ -383,7 +372,6 @@ PionNoir
       </data>
     </node>
     <node id="n18">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="186.04425007407394" x="1674.3586797037026" y="767.7198029259225"/>
@@ -401,7 +389,6 @@ PionNoir
       </data>
     </node>
     <node id="n19">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="147.03318755555574" x="-2774.470111296308" y="-333.5966786249976"/>
@@ -419,13 +406,12 @@ PionNoir
       </data>
     </node>
     <node id="n20">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="105.68888888888898" width="403.5999999999999" x="-2544.5595048216232" y="-359.8153097361087"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.40234375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="262.140625" x="70.72968749999995" y="36.143272569444434">Si posCurseur dans Plateau
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.40234375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="262.140625" x="70.72968749999973" y="36.14327256944449">Si posCurseur dans Plateau
 &amp;&amp; Case[posCurseur].etatCase == JoueurActuel<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -438,7 +424,6 @@ PionNoir
       </data>
     </node>
     <node id="n21">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="249.11832414814808" x="-2029.9788662592696" y="-333.5966786249975"/>
@@ -456,7 +441,6 @@ PionNoir
       </data>
     </node>
     <node id="n22">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="207.5842986666671" x="-1398.5661338148286" y="-333.5966786249975"/>
@@ -474,7 +458,6 @@ PionNoir
       </data>
     </node>
     <node id="n23">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="65.32148148148156" width="158.2916574814817" x="-1373.9198132222361" y="-217.9529343148148"/>
@@ -492,13 +475,12 @@ PionNoir
       </data>
     </node>
     <node id="n24">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="207.5842986666671" x="-615.4284010740922" y="-211.9180069074074"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="99.390625" x="54.09683683333378" y="17.275227395833326">Sélectionner case<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="99.390625" x="54.096836833333555" y="17.275227395833326">Sélectionner case<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -511,7 +493,6 @@ PionNoir
     </node>
     <node id="n25">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:UMLClassNode>
           <y:Geometry height="28.0" width="100.0" x="-178.91563826605784" y="-5.344463111111139"/>
@@ -546,7 +527,6 @@ SelectionnerCase()</y:MethodLabel>
     </node>
     <node id="n26">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:UMLClassNode>
           <y:Geometry height="28.0" width="100.0" x="-610.3423049327247" y="-5.344463111111139"/>
@@ -571,7 +551,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n27">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="186.04425007407372" x="-859.4412425555689" y="-200.29219357407408"/>
@@ -589,7 +568,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n28">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="186.04425007407372" x="-3082.671404777787" y="-321.97086529166427"/>
@@ -608,7 +586,6 @@ GameOver</y:AttributeLabel>
     </node>
     <node id="n29">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="50.0" width="110.0" x="-3022.2174345623544" y="896.6527591111113"/>
@@ -627,7 +604,6 @@ GameOver</y:AttributeLabel>
     </node>
     <node id="n30">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="50.0" width="110.0" x="-1669.4974449864199" y="44.83165073147825"/>
@@ -645,7 +621,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n31">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="194.49718518518512" x="-3064.4660271549474" y="1194.7736061134237"/>
@@ -663,7 +638,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n32">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="194.49718518518512" x="-3064.4660271549474" y="1254.7736061134237"/>
@@ -681,7 +655,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n33">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="194.49718518518512" x="-3064.4660271549474" y="998.1515953842579"/>
@@ -699,7 +672,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n34">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="194.49718518518512" x="-3064.4660271549474" y="1064.206706495369"/>
@@ -717,7 +689,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n35">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="194.49718518518512" x="-3064.4660271549474" y="1130.2618176064802"/>
@@ -736,7 +707,6 @@ GameOver</y:AttributeLabel>
     </node>
     <node id="n36">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="50.0" width="110.0" x="-3022.2174345623544" y="1322.9548145185188"/>
@@ -754,13 +724,12 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n37">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="207.5842986666671" x="-2757.060422981484" y="43.20583739814509"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="99.390625" x="54.09683683333333" y="17.275227395833326">Sélectionner case<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="99.390625" x="54.09683683333378" y="17.275227395833326">Sélectionner case<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -772,7 +741,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n38">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="186.04425007407372" x="-3082.671404777787" y="54.831650731478476"/>
@@ -790,7 +758,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n39">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="105.68888888888898" width="403.5999999999999" x="-2478.055929309895" y="16.987206287033814"/>
@@ -810,7 +777,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n40">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="186.04425007407372" x="-1964.9988121851943" y="54.83165073147825"/>
@@ -829,7 +795,6 @@ GameOver</y:AttributeLabel>
     </node>
     <node id="n41">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="50.0" width="110.0" x="-2787.1700375790124" y="314.34817049768503"/>
@@ -847,7 +812,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n42">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="186.04425007407372" x="-3082.671404777787" y="324.34817049768503"/>
@@ -865,7 +829,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n43">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="249.11832414814808" x="-2567.7129204543116" y="312.7223571643517"/>
@@ -883,7 +846,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n44">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="186.04425007407372" x="-953.111844573795" y="-6.344463111111168"/>
@@ -901,7 +863,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n45">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="186.04425007407372" x="-953.111844573795" y="90.75515331480892"/>
@@ -919,7 +880,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n46">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="186.04425007407372" x="-953.111844573795" y="187.854769740729"/>
@@ -937,7 +897,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n47">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="186.04425007407372" x="-953.111844573795" y="352.472502444421"/>
@@ -956,7 +915,6 @@ GameOver</y:AttributeLabel>
     </node>
     <node id="n48">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="50.0" width="110.0" x="-1154.5389606629446" y="-16.344463111111168"/>
@@ -974,7 +932,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n49">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="-875.0897195367581" y="-87.4513856433764"/>
@@ -993,7 +950,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n50">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="-875.0897195367581" y="452.78167315769167"/>
@@ -1012,7 +968,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n51">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="42.917570370370356" width="153.52426666666656" x="-936.8518528700914" y="263.70485090738987"/>
@@ -1030,7 +985,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n52">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="249.11832414814808" x="-1714.272500037049" y="-333.5966786249975"/>
@@ -1048,7 +1002,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n53">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="77.43170370370365" width="218.71762962962976" x="-2235.017297277496" y="300.6323186458332"/>
@@ -1067,7 +1020,6 @@ GameOver</y:AttributeLabel>
     </node>
     <node id="n54">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="50.0" width="110.0" x="-2180.6584824626807" y="454.5241112384257"/>
@@ -1085,7 +1037,6 @@ GameOver</y:AttributeLabel>
       </data>
     </node>
     <node id="n55">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="98.62459259259253" width="249.11832414814808" x="-1932.7223686191983" y="290.03587420138876"/>
@@ -1105,7 +1056,6 @@ CaseOrigine) &gt; 1<y:LabelModel>
     </node>
     <node id="n56">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="50.0" width="110.0" x="-1600.0267454423824" y="314.34817049768503"/>
@@ -1123,7 +1073,6 @@ CaseOrigine) &gt; 1<y:LabelModel>
       </data>
     </node>
     <node id="n57">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="186.04425007407372" x="-1411.3800695594596" y="324.34817049768503"/>
@@ -1142,7 +1091,6 @@ CaseOrigine) &gt; 1<y:LabelModel>
     </node>
     <node id="n58">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="50.0" width="110.0" x="-1863.1632065451242" y="454.5241112384257"/>
@@ -1161,7 +1109,6 @@ CaseOrigine) &gt; 1<y:LabelModel>
     </node>
     <node id="n59">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="50.0" width="110.0" x="-2787.1700375790124" y="573.827303958333"/>
@@ -1179,7 +1126,6 @@ CaseOrigine) &gt; 1<y:LabelModel>
       </data>
     </node>
     <node id="n60">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="40.0" width="92.56948148148149" x="-2989.1966361851946" y="578.827303958333"/>
@@ -1198,13 +1144,12 @@ CaseActuelle<y:LabelModel>
       </data>
     </node>
     <node id="n61">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="98.62459259259253" width="249.11832414814808" x="-2593.6906631643224" y="549.5150076620367"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.40234375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="191.44140625" x="28.838458949074038" y="32.61112442129627">Si distance(PionSelectionne.Case, 
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.40234375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="191.44140625" x="28.838458949074266" y="32.61112442129627">Si distance(PionSelectionne.Case, 
 CaseOrigine) &gt; 1<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -1217,7 +1162,6 @@ CaseOrigine) &gt; 1<y:LabelModel>
       </data>
     </node>
     <node id="n62">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="-2484.131501090248" y="688.0827987455125"/>
@@ -1236,13 +1180,12 @@ CaseOrigine) &gt; 1<y:LabelModel>
     </node>
     <node id="n63">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:UMLNoteNode>
           <y:Geometry height="28.0" width="212.77586663796387" x="-1827.7612139381802" y="224.85761356032702"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="170.74609375" x="21.01488644398205" y="4.6494140625">Test valeur Retour MangerPion<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="170.74609375" x="21.014886443981823" y="4.6494140625">Test valeur Retour MangerPion<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1253,7 +1196,6 @@ CaseOrigine) &gt; 1<y:LabelModel>
       </data>
     </node>
     <node id="n64">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="151.5058962962962" x="-1876.650021359939" y="583.827303958333"/>
@@ -1272,7 +1214,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </node>
     <node id="n65">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="342.8474074074077" x="-2297.0821861663844" y="583.827303958333"/>
@@ -1290,7 +1231,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </node>
     <node id="n66">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="258.0758518518519" x="-1641.5326417386786" y="583.827303958333"/>
@@ -1308,7 +1248,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </node>
     <node id="n67">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="-1312.0977478595091" y="583.827303958333"/>
@@ -1326,7 +1265,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </node>
     <node id="n68">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="53.25162666666665" width="217.2724764444448" x="-1146.170937370384" y="-211.91800690740735"/>
@@ -1422,7 +1360,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e6" source="n5" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="38.749647333332405" ty="7.511477629629269">
@@ -1444,7 +1381,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e7" source="n11" target="n10">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1466,7 +1402,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e8" source="n8" target="n9">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1477,7 +1412,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e9" source="n17" target="n8">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1488,7 +1422,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e10" source="n9" target="n10">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1499,7 +1432,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e11" source="n10" target="n11">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1510,7 +1442,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e12" source="n11" target="n12">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1529,7 +1460,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e13" source="n12" target="n13">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1540,7 +1470,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e14" source="n13" target="n15">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1561,7 +1490,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e15" source="n13" target="n14">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1580,7 +1508,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e16" source="n14" target="n15">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1593,7 +1520,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e17" source="n15" target="n18">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1612,7 +1538,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e18" source="n15" target="n16">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1631,7 +1556,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e19" source="n18" target="n9">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1645,7 +1569,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e20" source="n19" target="n20">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1656,7 +1579,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e21" source="n20" target="n21">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1675,7 +1597,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e22" source="n21" target="n52">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1686,7 +1607,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e23" source="n22" target="n23">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1697,7 +1617,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e24" source="n23" target="n19">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1718,7 +1637,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e25" source="n23" target="n68">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-108.63623822222235" ty="0.0"/>
@@ -1737,7 +1655,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e26" source="n26" target="n25">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1748,7 +1665,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e27" source="n27" target="n24">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1759,7 +1675,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e28" source="n28" target="n19">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1770,7 +1685,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e29" source="n29" target="n33">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1781,7 +1695,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e30" source="n33" target="n34">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1792,7 +1705,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e31" source="n34" target="n35">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1803,7 +1715,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e32" source="n35" target="n31">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1814,7 +1725,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e33" source="n31" target="n32">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1825,7 +1735,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e34" source="n32" target="n36">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1836,7 +1745,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e35" source="n20" target="n19">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1858,7 +1766,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e36" source="n38" target="n37">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1869,7 +1776,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e37" source="n37" target="n39">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1880,7 +1786,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e38" source="n39" target="n40">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1899,7 +1804,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e39" source="n40" target="n30">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1910,7 +1814,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e40" source="n39" target="n37">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1932,7 +1835,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e41" source="n42" target="n41">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1943,7 +1845,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e42" source="n41" target="n43">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1954,7 +1855,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e43" source="n49" target="n44">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1965,7 +1865,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e44" source="n44" target="n45">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1976,7 +1875,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e45" source="n45" target="n46">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1987,7 +1885,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e46" source="n46" target="n51">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1998,24 +1895,12 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e47" source="n51" target="n47">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e48" source="n47" target="n50">
-      <data key="d9"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="22.673828125" x="-41.33691191957064" y="25.803998201446973">Oui<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="22.673828125" x="-41.33691191957064" y="13.612037056403096">Oui<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -2027,16 +1912,25 @@ CaseMange.Etat = VIDE<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e49" source="n47" target="n48">
-      <data key="d9"/>
+    <edge id="e48" source="n47" target="n50">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="-1099.5389606629446" y="367.472502444421"/>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e49" source="n51" target="n48">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-21.243096913112367" sy="0.9442670642391136" tx="0.0" ty="0.0">
+            <y:Point x="-1099.5389606629446" y="286.1079031568142"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="26.013671875" x="-86.22042214961994" y="-39.35058715518835">Non<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="26.013671875" x="-106.74521145401809" y="-39.35059293693587">Non<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -2049,7 +1943,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e50" source="n48" target="n44">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2060,7 +1953,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e51" source="n52" target="n22">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2071,7 +1963,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e52" source="n43" target="n53">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2082,7 +1973,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e53" source="n53" target="n55">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2101,7 +1991,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e54" source="n55" target="n56">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2120,7 +2009,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e55" source="n56" target="n57">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2131,7 +2019,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e56" source="n55" target="n58">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2150,7 +2037,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e57" source="n53" target="n54">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2169,7 +2055,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e58" source="n54" target="n55">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2189,7 +2074,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e59" source="n60" target="n59">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2200,7 +2084,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e60" source="n59" target="n61">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2211,7 +2094,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e61" source="n61" target="n62">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2230,7 +2112,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e62" source="n63" target="n55">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2241,7 +2122,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e63" source="n61" target="n65">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2252,7 +2132,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e64" source="n65" target="n64">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2263,7 +2142,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e65" source="n64" target="n66">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2274,7 +2152,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e66" source="n66" target="n67">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2285,7 +2162,6 @@ CaseMange.Etat = VIDE<y:LabelModel>
       </data>
     </edge>
     <edge id="e67" source="n68" target="n27">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
