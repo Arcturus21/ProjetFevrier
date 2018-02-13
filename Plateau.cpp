@@ -3,7 +3,7 @@
 Plateau::Plateau() : _vertices(sf::Quads, 4*NB_CASE*NB_CASE)
 {
     //ctor
-    sf::Color couleur=sf::Color::Black;
+    sf::Color couleur=sf::Color::White;
     for(int i=0;i<NB_CASE;i++)
     {
         for(int j=0;j<NB_CASE;j++)

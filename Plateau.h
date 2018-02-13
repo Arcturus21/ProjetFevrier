@@ -15,6 +15,10 @@ class Plateau : public sf::Drawable, public sf::Transformable
         Plateau();
         virtual ~Plateau();
 
+        Case* GetCase(int i, int j){if(i<0 || j<0 || i>=NB_CASE || j>=NB_CASE)return NULL;
+                                        return &_plateau[i][j];};
+
+
     protected:
 
     private:

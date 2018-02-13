@@ -1,11 +1,14 @@
 #ifndef PION_H
 #define PION_H
 
+#include <iostream>
+#include <vector>
 #include <SFML/Graphics.hpp>
 
 #define RAYON_PION 15
 
 class Plateau;
+class Case;
 
 class Pion : public sf::Drawable, public sf::Transformable
 {
@@ -15,6 +18,10 @@ class Pion : public sf::Drawable, public sf::Transformable
 
         bool IsAlive(){return _alive;};
         void SetPlateau(Plateau& p){_plateau=&p;};
+
+        sf::Color GetColor(){return _color;};
+
+        std::vector<Case*> GetCaseDeplacement();
 
     protected:
 
