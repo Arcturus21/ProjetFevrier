@@ -17,11 +17,14 @@ class Pion : public sf::Drawable, public sf::Transformable
         virtual ~Pion();
 
         bool IsAlive(){return _alive;};
+        void SetAlive(bool alive){_alive=alive;};
         void SetPlateau(Plateau& p){_plateau=&p;};
 
         sf::Color GetColor(){return _color;};
 
-        std::vector<Case*> GetCaseDeplacement();
+        std::vector<Case*>* GetCaseDeplacement();
+
+        void setCase(int caseX,int caseY);
 
     protected:
 

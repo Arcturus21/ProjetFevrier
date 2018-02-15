@@ -23,9 +23,9 @@ Pion::~Pion()
 }
 
 ///A SIMPLIFIER
-std::vector<Case*> Pion::GetCaseDeplacement()
+std::vector<Case*>* Pion::GetCaseDeplacement()
 {
-    vector<Case*> retour;
+    vector<Case*>* retour=new vector<Case*>();
     Case* cTemp=NULL;
 
     if(_color==sf::Color::White)
@@ -35,12 +35,12 @@ std::vector<Case*> Pion::GetCaseDeplacement()
         if(cTemp!=NULL)
         {
             if(cTemp->GetEtatCase()==vide)
-                retour.push_back(cTemp);
+                retour->push_back(cTemp);
             else if(cTemp->GetEtatCase()==pionNoir)
             {
                 cTemp=_plateau->GetCase(_caseX-2,_caseY-2);
                 if(cTemp!=NULL && cTemp->GetEtatCase()==vide)
-                    retour.push_back(cTemp);
+                    retour->push_back(cTemp);
             }
         }
         ///EN FACE A SA DROITE
@@ -48,12 +48,12 @@ std::vector<Case*> Pion::GetCaseDeplacement()
         if(cTemp!=NULL)
         {
             if(cTemp->GetEtatCase()==vide)
-                retour.push_back(cTemp);
+                retour->push_back(cTemp);
             else if(cTemp->GetEtatCase()==pionNoir)
             {
                 cTemp=_plateau->GetCase(_caseX+2,_caseY-2);
                 if(cTemp!=NULL && cTemp->GetEtatCase()==vide)
-                    retour.push_back(cTemp);
+                    retour->push_back(cTemp);
             }
         }
     }
@@ -64,12 +64,12 @@ std::vector<Case*> Pion::GetCaseDeplacement()
         if(cTemp!=NULL)
         {
             if(cTemp->GetEtatCase()==vide)
-                retour.push_back(cTemp);
+                retour->push_back(cTemp);
             else if(cTemp->GetEtatCase()==pionBlanc)
             {
                 cTemp=_plateau->GetCase(_caseX-2,_caseY+2);
                 if(cTemp!=NULL && cTemp->GetEtatCase()==vide)
-                    retour.push_back(cTemp);
+                    retour->push_back(cTemp);
             }
         }
         ///EN FACE A SA DROITE
@@ -77,15 +77,28 @@ std::vector<Case*> Pion::GetCaseDeplacement()
         if(cTemp!=NULL)
         {
             if(cTemp->GetEtatCase()==vide)
-                retour.push_back(cTemp);
+                retour->push_back(cTemp);
             else if(cTemp->GetEtatCase()==pionBlanc)
             {
                 cTemp=_plateau->GetCase(_caseX+2,_caseY+2);
                 if(cTemp!=NULL && cTemp->GetEtatCase()==vide)
-                    retour.push_back(cTemp);
+                    retour->push_back(cTemp);
             }
         }
     }
 
     return retour;
+}
+
+void Pion::setCase(int caseX,int caseY)
+{
+    _plateau->GetCase(_caseX,_caseY)->SetPion(NULL);
+
+    _caseX=caseX;
+    _caseY=caseY;
+
+    int moitTailleCase=TAILLE_CASE/2;
+    setPosition(caseX*TAILLE_CASE+moitTailleCase,caseY*TAILLE_CASE+moitTailleCase);
+
+    _plateau->GetCase(_caseX,_caseY)->SetPion(this);
 }

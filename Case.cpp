@@ -25,10 +25,10 @@ void Case::init(int indX, int indY, sf::Color color)
 
 void Case::SetPion(Pion* p)
 {
-    if(p==NULL)
-        return;
     _pionSurCase=p;
-    if(p->GetColor()==sf::Color::Black)
+    if(p==NULL)
+        _etatCase=vide;
+    else if(p->GetColor()==sf::Color::Black)
         _etatCase=pionNoir;
     else
         _etatCase=pionBlanc;

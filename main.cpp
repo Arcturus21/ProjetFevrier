@@ -14,22 +14,7 @@ int main()
 
     GameManager gm;
 
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        window.clear();
-
-        window.draw(plateau);
-        gm.AfficherPions(window);
-
-        window.display();
-    }
+    gm.Play(window);
 
     return 0;
 }

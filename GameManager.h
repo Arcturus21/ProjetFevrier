@@ -7,22 +7,44 @@
 #include "Case.h"
 #include "Plateau.h"
 
+typedef enum
+{
+    selectionPion,
+    selectionCase,
+    deplacementPion,
+    gameOver
+}EtatTour;
+
 class GameManager
 {
     public:
         GameManager();
         virtual ~GameManager();
 
-        void NextTurn();
-        void SelectionnerPion();
-        void SelectionnerCase();
-
-        void AfficherPions(sf::RenderTarget& target);
+        void Play(sf::RenderWindow& window);
 
     protected:
 
     private:
+
+        void NextTurn();
+        bool Selection(int mousePosX, int mousePosY);
+        bool SelectionnerPion(int indX, int indY);
+        bool SelectionnerCase(int indX, int indY);
+
+        bool Manger(int indX, int indY);
+
+        void SetCaseAtteignable(std::vector<Case*>* listCaseAtteignable);
+
+        void AfficherPions(sf::RenderTarget& target);
+
+        bool SetEtat(EtatTour etat);
+
+        int GameOver();
+
+    private:
         int _joueurActuel;
+        EtatTour _etatTour;
 
         Plateau _plateau;
 
@@ -31,7 +53,8 @@ class GameManager
 
         Pion* _pionSelectionne;
         Case* _casePionOrigine;
-        std::vector<Case*>* _listCasesDisponibles;
+        sf::VertexArray* _masqueCaseActuel;
+        std::vector<Case*>* _listCaseAtteignable;
         sf::VertexArray* _masqueCaseSelectionnable;
 };
 

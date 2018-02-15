@@ -26,10 +26,14 @@ public:
     void init(int indX, int indY, sf::Color color);
 
     void SetPion(Pion* p);
+    Pion* GetPion(){return _pionSurCase;};
     EtatCase GetEtatCase()
     {
         return _etatCase;
     };
+    sf::Vector2f GetPosition(){return _position;};
+    int GetIndX(){return _indX;};
+    int GetIndY(){return _indY;};
 
 protected:
 
