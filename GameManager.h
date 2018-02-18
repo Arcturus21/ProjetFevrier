@@ -9,6 +9,7 @@
 
 typedef enum
 {
+    none,
     selectionPion,
     selectionCase,
     deplacementPion,
@@ -34,7 +35,7 @@ class GameManager
 
         bool Manger(int indX, int indY);
 
-        void SetCaseAtteignable(std::vector<Case*>* listCaseAtteignable);
+        bool SetCaseAtteignable(std::vector<Case*>* listCaseAtteignable);
 
         void AfficherPions(sf::RenderTarget& target);
 
@@ -42,9 +43,15 @@ class GameManager
 
         int GameOver();
 
+        EtatTour GetActionActivated(int indX, int indY);
+
+        bool MasqueCasePion();
+        bool InitDeplacementPion();
+
     private:
         int _joueurActuel;
         EtatTour _etatTour;
+        bool _aManger;
 
         Plateau _plateau;
 

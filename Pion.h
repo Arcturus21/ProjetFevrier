@@ -25,6 +25,7 @@ class Pion : public sf::Drawable, public sf::Transformable
         std::vector<Case*>* GetCaseDeplacement();
 
         void setCase(int caseX,int caseY);
+        Case* getCase();
 
     protected:
 

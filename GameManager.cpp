@@ -1,6 +1,8 @@
 #include "GameManager.h"
 
-GameManager::GameManager(): _joueurActuel(1), _etatTour(selectionPion),_pionSelectionne(NULL),
+using namespace std;
+
+GameManager::GameManager(): _joueurActuel(1), _etatTour(selectionPion),_aManger(false),_pionSelectionne(NULL),
     _casePionOrigine(NULL),_masqueCaseActuel(NULL),_listCaseAtteignable(NULL),_masqueCaseSelectionnable(NULL)
 {
     //ctor
@@ -45,7 +47,7 @@ GameManager::~GameManager()
     }
 }
 
-void GameManager::Play(sf::RenderWindow& window)
+void GameManager::Play(sf::RenderWindow& window)    ///déroulement de la partie
 {
     _etatTour=selectionPion;
     while (window.isOpen())
@@ -53,26 +55,17 @@ void GameManager::Play(sf::RenderWindow& window)
         sf::Event event;
         while (window.pollEvent(event))
         {
-            if (event.type == sf::Event::Closed)
+            if (event.type == sf::Event::Closed)            ///Evenement de fermeture du jeu
                 window.close();
-            else if(event.type == sf::Event::MouseButtonReleased)
+            else if(event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
+                window.close();
+            else if(event.type == sf::Event::MouseButtonReleased)   ///Clic sur une case
             {
                 if(event.mouseButton.button == sf::Mouse::Left)
                 {
-                    int indX=(int)(event.mouseButton.x/TAILLE_CASE), indY=(int)(event.mouseButton.y/TAILLE_CASE);
-                    /*if(Selection(event.mouseButton.x, event.mouseButton.y))
-                    {
-                        if(_etatTour==selectionPion)
-                        {
-                            SetCaseAtteignable(_pionSelectionne->GetCaseDeplacement());
-                            SetEtat(selectionCase);
-                        }
-                        else if(_etatTour==selectionCase)
-                        {
-                            SetEtat(deplacementPion);
-                        }
-                    }*/
-                    if(_etatTour==selectionPion)
+                    int indX=(int)(event.mouseButton.x/TAILLE_CASE), indY=(int)(event.mouseButton.y/TAILLE_CASE);   ///Indice de la case sur laquelle on a cliqué
+
+                    /*if(_etatTour==selectionPion)    ///Si l'on doit sélectionner un pion
                     {
                         if(SelectionnerPion(indX, indY))
                         {
@@ -85,15 +78,47 @@ void GameManager::Play(sf::RenderWindow& window)
                         if(SelectionnerCase(indX, indY))
                         {
                             SetEtat(deplacementPion);
+                            cout << indX << " " << indY << endl;
 
                             int distanceCaseX = indX-_casePionOrigine->GetIndX();
                             int distanceCaseY = indY-_casePionOrigine->GetIndY();
-                            if(indX>=2 || indX<=-2)
+                            if(distanceCaseX>=2 || distanceCaseX<=-2)
                             {
+                                cout << indX-distanceCaseX/2 << " " << indY-distanceCaseY/2 << endl;
                                 Manger(indX-distanceCaseX/2,indY-distanceCaseY/2);
                             }
 
                             NextTurn();
+                        }
+                    }*/
+                    EtatTour actionActivated=GetActionActivated(indX, indY);
+                    if(actionActivated==selectionPion && !_aManger)      ///Si l'on a cliqué sur un pion c'est qu'on veut le sélectionné
+                    {
+                        if(SelectionnerPion(indX, indY))
+                        {
+                            SetCaseAtteignable(_pionSelectionne->GetCaseDeplacement());
+                            InitDeplacementPion();
+                            SetEtat(selectionCase);
+                        }
+                    }
+                    else if(actionActivated==selectionCase&&_pionSelectionne!=NULL) ///si l'on a cliqué sur une case APRES avoir choisis un pion
+                    {
+                        if(SelectionnerCase(indX, indY))
+                        {
+                            SetEtat(deplacementPion);
+
+                            int distanceCaseX = indX-_casePionOrigine->GetIndX();
+                            int distanceCaseY = indY-_casePionOrigine->GetIndY();
+                            if(distanceCaseX>=2 || distanceCaseX<=-2)
+                            {
+                                _aManger=Manger(indX-distanceCaseX/2,indY-distanceCaseY/2);    ///Si l'on a manger un pion, on peut rejouer
+                                if(!InitDeplacementPion())
+                                    cout << "false" << endl;
+                                SetEtat(selectionCase);
+                            }
+
+                            if(!_aManger || _listCaseAtteignable->size()<=0)
+                                NextTurn();
                         }
                     }
                 }
@@ -129,6 +154,24 @@ void GameManager::AfficherPions(sf::RenderTarget& target)
         target.draw(*_masqueCaseSelectionnable);
 }
 
+EtatTour GameManager::GetActionActivated(int indX, int indY)
+{
+    if(indX<0||indY<0||indX>=NB_CASE||indY>=NB_CASE)    ///clique en dehors du plateau -> on quitte
+        return none;
+
+    Case* c=_plateau.GetCase(indX,indY);
+    if(c==NULL)         ///La case sélectionné est NULL = problème -> on quitte
+        return none;
+
+    if(c->GetPion()==NULL)      ///s'il n'y a aucun pion sur la case, c'est potentiellement une case à sélectionné
+        return selectionCase;
+    else if((c->GetPion()->GetColor()==sf::Color::White && _joueurActuel==1)       ///Si le pion sur la case est un des pions du joueur
+            || (c->GetPion()->GetColor()==sf::Color::Black && _joueurActuel==2))   ///Il veut peut être sélectionné un pion
+        return selectionPion;
+    else
+        return none;
+}
+
 void GameManager::NextTurn()
 {
     _pionSelectionne=NULL;
@@ -147,6 +190,7 @@ void GameManager::NextTurn()
 
     _joueurActuel = (_joueurActuel)%2+1;
     _etatTour=selectionPion;
+    _aManger=false;
 }
 
 bool GameManager::Selection(int mousePosX, int mousePosY)
@@ -192,6 +236,17 @@ bool GameManager::SelectionnerPion(int indX, int indY)
         return false;
     _casePionOrigine=caseCliquee;
 
+
+
+    return true;
+}
+
+bool GameManager::MasqueCasePion()
+{
+    if(_pionSelectionne==NULL)
+        return false;
+    if(_masqueCaseActuel!=NULL)
+        delete _masqueCaseActuel;
     _masqueCaseActuel=new sf::VertexArray(sf::Quads,4);
     (*_masqueCaseActuel)[0].position=_casePionOrigine->GetPosition();
     (*_masqueCaseActuel)[0].color=sf::Color(200,0,0,128);
@@ -205,11 +260,42 @@ bool GameManager::SelectionnerPion(int indX, int indY)
     return true;
 }
 
-void GameManager::SetCaseAtteignable(std::vector<Case*>* listCaseAtteignable)
+bool GameManager::InitDeplacementPion()
+{
+    if(_pionSelectionne==NULL)
+        return false;
+    _casePionOrigine=_pionSelectionne->getCase();
+    cout << _pionSelectionne->getCase()->GetIndX() << " " << _pionSelectionne->getCase()->GetIndY() << endl;
+    if(_casePionOrigine==NULL)
+        return false;
+    if(!MasqueCasePion())
+    {
+        cout << "masquecasePionFail" << endl;
+        return false;
+    }
+    if(!SetCaseAtteignable(_pionSelectionne->GetCaseDeplacement()))
+    {
+        cout << "caseatteignablefail" << endl;
+        return false;
+    }
+
+    return true;
+}
+
+bool GameManager::SetCaseAtteignable(std::vector<Case*>* listCaseAtteignable)
 {
     if(listCaseAtteignable==NULL)
-        return;
+        return false;
     _listCaseAtteignable=listCaseAtteignable;
+
+    if(_listCaseAtteignable!=NULL)
+        delete _listCaseAtteignable;
+
+    if(_masqueCaseSelectionnable!=NULL)
+        delete _masqueCaseSelectionnable;
+
+    if(listCaseAtteignable->size()<=0)
+        return false;
 
     _masqueCaseSelectionnable = new sf::VertexArray(sf::Quads,4*_listCaseAtteignable->size());
     for(unsigned int i=0, j=0; i<_masqueCaseSelectionnable->getVertexCount(); i+=4,j++)
@@ -223,6 +309,7 @@ void GameManager::SetCaseAtteignable(std::vector<Case*>* listCaseAtteignable)
         (*_masqueCaseSelectionnable)[i+3].position=(*_listCaseAtteignable)[j]->GetPosition()+sf::Vector2f(0,TAILLE_CASE);
         (*_masqueCaseSelectionnable)[i+3].color=sf::Color(0,200,0,128);
     }
+    return true;
 }
 
 bool GameManager::SelectionnerCase(int indX, int indY)

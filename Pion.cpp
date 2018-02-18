@@ -102,3 +102,10 @@ void Pion::setCase(int caseX,int caseY)
 
     _plateau->GetCase(_caseX,_caseY)->SetPion(this);
 }
+
+Case* Pion::getCase()
+{
+    if(_plateau==NULL)
+        return NULL;
+    return _plateau->GetCase(_caseX,_caseY);
+}
