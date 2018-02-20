@@ -13,6 +13,7 @@ typedef enum
     selectionPion,
     selectionCase,
     deplacementPion,
+    finTour,
     gameOver
 }EtatTour;
 
@@ -32,6 +33,7 @@ class GameManager
         bool Selection(int mousePosX, int mousePosY);
         bool SelectionnerPion(int indX, int indY);
         bool SelectionnerCase(int indX, int indY);
+        bool BoutDePlateau(Pion* p);
 
         bool Manger(int indX, int indY);
 

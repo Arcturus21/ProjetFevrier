@@ -23,66 +23,93 @@ Pion::~Pion()
 }
 
 ///A SIMPLIFIER
-std::vector<Case*>* Pion::GetCaseDeplacement()
+std::vector<Case*>* Pion::GetCaseDeplacement(bool manger)
 {
     vector<Case*>* retour=new vector<Case*>();
-    Case* cTemp=NULL;
+    Case *cTemp=NULL, *cTemp2=NULL;
 
+    EtatCase pionAdverse;
+    int enFace=0;
     if(_color==sf::Color::White)
     {
-        ///EN FACE A SA GAUCHE
-        cTemp=_plateau->GetCase(_caseX-1,_caseY-1);
-        if(cTemp!=NULL)
-        {
-            if(cTemp->GetEtatCase()==vide)
-                retour->push_back(cTemp);
-            else if(cTemp->GetEtatCase()==pionNoir)
-            {
-                cTemp=_plateau->GetCase(_caseX-2,_caseY-2);
-                if(cTemp!=NULL && cTemp->GetEtatCase()==vide)
-                    retour->push_back(cTemp);
-            }
-        }
-        ///EN FACE A SA DROITE
-        cTemp=_plateau->GetCase(_caseX+1,_caseY-1);
-        if(cTemp!=NULL)
-        {
-            if(cTemp->GetEtatCase()==vide)
-                retour->push_back(cTemp);
-            else if(cTemp->GetEtatCase()==pionNoir)
-            {
-                cTemp=_plateau->GetCase(_caseX+2,_caseY-2);
-                if(cTemp!=NULL && cTemp->GetEtatCase()==vide)
-                    retour->push_back(cTemp);
-            }
-        }
+        pionAdverse=pionNoir;
+        enFace=-1;
     }
     else
     {
-        ///EN FACE A SA GAUCHE
-        cTemp=_plateau->GetCase(_caseX-1,_caseY+1);
-        if(cTemp!=NULL)
+        pionAdverse=pionBlanc;
+        enFace=1;
+    }
+
+    ///Vérifie si on peut manger un pion dans les 4 directions
+    ///BAS-DROITE
+    cTemp=_plateau->GetCase(_caseX+2,_caseY+2); ///Case sur laquelle on place le pion
+    cTemp2=_plateau->GetCase(_caseX+1,_caseY+1);    ///Case potentielle du pion adverse
+    if(cTemp!=NULL || cTemp2!=NULL) ///Au cas ou on soit hors plateau ou en cas d'erreur
+    {
+        if(cTemp2->GetEtatCase()==pionAdverse && cTemp->GetEtatCase()==vide)
+        {
+            retour->push_back(cTemp);
+            manger=true;                ///si le pion peut manger un autre pion
+        }
+    }
+
+    ///BAS-GAUCHE
+    cTemp=_plateau->GetCase(_caseX-2,_caseY+2); ///Case sur laquelle on place le pion
+    cTemp2=_plateau->GetCase(_caseX-1,_caseY+1);    ///Case potentielle du pion adverse
+    if(cTemp!=NULL && cTemp2!=NULL) ///Au cas ou on soit hors plateau ou en cas d'erreur
+    {
+        if(cTemp2->GetEtatCase()==pionAdverse && cTemp->GetEtatCase()==vide)
+        {
+            retour->push_back(cTemp);
+            manger=true;                ///si le pion peut manger un autre pion
+        }
+    }
+
+    ///HAUT-DROITE
+    cTemp=_plateau->GetCase(_caseX+2,_caseY-2); ///Case sur laquelle on place le pion
+    cTemp2=_plateau->GetCase(_caseX+1,_caseY-1);    ///Case potentielle du pion adverse
+    if(cTemp!=NULL && cTemp2!=NULL) ///Au cas ou on soit hors plateau ou en cas d'erreur
+    {
+        if(cTemp2->GetEtatCase()==pionAdverse && cTemp->GetEtatCase()==vide)
+        {
+            retour->push_back(cTemp);
+            manger=true;                ///si le pion peut manger un autre pion
+        }
+    }
+
+    ///HAUT-GAUCHE
+    cTemp=_plateau->GetCase(_caseX-2,_caseY-2); ///Case sur laquelle on place le pion
+    cTemp2=_plateau->GetCase(_caseX-1,_caseY-1);    ///Case potentielle du pion adverse
+    if(cTemp!=NULL && cTemp2!=NULL) ///Au cas ou on soit hors plateau ou en cas d'erreur
+    {
+        if(cTemp2->GetEtatCase()==pionAdverse && cTemp->GetEtatCase()==vide)
+        {
+            retour->push_back(cTemp);
+            manger=true;                ///si le pion peut manger un autre pion
+        }
+    }
+
+    ///Si on a pas l'occasion de manger un pion, on peut déplacer librement
+    if(!manger)
+    {
+        ///GAUCHE
+        cTemp=_plateau->GetCase(_caseX-1,_caseY+enFace); ///Case sur laquelle on place le pion
+        if(cTemp!=NULL)                   ///Au cas ou on soit hors plateau ou en cas d'erreur
         {
             if(cTemp->GetEtatCase()==vide)
-                retour->push_back(cTemp);
-            else if(cTemp->GetEtatCase()==pionBlanc)
             {
-                cTemp=_plateau->GetCase(_caseX-2,_caseY+2);
-                if(cTemp!=NULL && cTemp->GetEtatCase()==vide)
-                    retour->push_back(cTemp);
+                retour->push_back(cTemp);
             }
         }
-        ///EN FACE A SA DROITE
-        cTemp=_plateau->GetCase(_caseX+1,_caseY+1);
-        if(cTemp!=NULL)
+
+        ///DROITE
+        cTemp=_plateau->GetCase(_caseX+1,_caseY+enFace); ///Case sur laquelle on place le pion
+        if(cTemp!=NULL)                   ///Au cas ou on soit hors plateau ou en cas d'erreur
         {
             if(cTemp->GetEtatCase()==vide)
-                retour->push_back(cTemp);
-            else if(cTemp->GetEtatCase()==pionBlanc)
             {
-                cTemp=_plateau->GetCase(_caseX+2,_caseY+2);
-                if(cTemp!=NULL && cTemp->GetEtatCase()==vide)
-                    retour->push_back(cTemp);
+                retour->push_back(cTemp);
             }
         }
     }

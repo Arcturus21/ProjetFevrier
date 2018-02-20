@@ -64,13 +64,12 @@ void GameManager::Play(sf::RenderWindow& window)    ///déroulement de la partie
                 if(event.mouseButton.button == sf::Mouse::Left)
                 {
                     int indX=(int)(event.mouseButton.x/TAILLE_CASE), indY=(int)(event.mouseButton.y/TAILLE_CASE);   ///Indice de la case sur laquelle on a cliqué
-
-                    /*if(_etatTour==selectionPion)    ///Si l'on doit sélectionner un pion
+                    if(_etatTour==selectionPion)    ///Si l'on doit sélectionner un pion
                     {
                         if(SelectionnerPion(indX, indY))
                         {
-                            SetCaseAtteignable(_pionSelectionne->GetCaseDeplacement());
-                            SetEtat(selectionCase);
+                            if(SetCaseAtteignable(_pionSelectionne->GetCaseDeplacement()))
+                                SetEtat(selectionCase);
                         }
                     }
                     else if(_etatTour==selectionCase)
@@ -78,59 +77,40 @@ void GameManager::Play(sf::RenderWindow& window)    ///déroulement de la partie
                         if(SelectionnerCase(indX, indY))
                         {
                             SetEtat(deplacementPion);
-                            cout << indX << " " << indY << endl;
 
                             int distanceCaseX = indX-_casePionOrigine->GetIndX();
                             int distanceCaseY = indY-_casePionOrigine->GetIndY();
                             if(distanceCaseX>=2 || distanceCaseX<=-2)
                             {
-                                cout << indX-distanceCaseX/2 << " " << indY-distanceCaseY/2 << endl;
                                 Manger(indX-distanceCaseX/2,indY-distanceCaseY/2);
+                                _aManger=SetCaseAtteignable(_pionSelectionne->GetCaseDeplacement(true));
                             }
 
-                            NextTurn();
-                        }
-                    }*/
-                    EtatTour actionActivated=GetActionActivated(indX, indY);
-                    if(actionActivated==selectionPion && !_aManger)      ///Si l'on a cliqué sur un pion c'est qu'on veut le sélectionné
-                    {
-                        if(SelectionnerPion(indX, indY))
-                        {
-                            SetCaseAtteignable(_pionSelectionne->GetCaseDeplacement());
-                            InitDeplacementPion();
-                            SetEtat(selectionCase);
-                        }
-                    }
-                    else if(actionActivated==selectionCase&&_pionSelectionne!=NULL) ///si l'on a cliqué sur une case APRES avoir choisis un pion
-                    {
-                        if(SelectionnerCase(indX, indY))
-                        {
-                            SetEtat(deplacementPion);
-
-                            int distanceCaseX = indX-_casePionOrigine->GetIndX();
-                            int distanceCaseY = indY-_casePionOrigine->GetIndY();
-                            if(distanceCaseX>=2 || distanceCaseX<=-2)
+                            if(_aManger)
                             {
-                                _aManger=Manger(indX-distanceCaseX/2,indY-distanceCaseY/2);    ///Si l'on a manger un pion, on peut rejouer
-                                if(!InitDeplacementPion())
-                                    cout << "false" << endl;
                                 SetEtat(selectionCase);
                             }
-
-                            if(!_aManger || _listCaseAtteignable->size()<=0)
+                            else
+                            {
+                                /*if(BoutDePlateau(_pionSelectionne))
+                                {
+                                    _pionSelectionne=new Dame(*_pionSelectionne);
+                                }*/
+                                SetEtat(finTour);
                                 NextTurn();
+                            }
                         }
                     }
                 }
             }
+
+            window.clear();
+
+            window.draw(_plateau);
+            AfficherPions(window);
+
+            window.display();
         }
-
-        window.clear();
-
-        window.draw(_plateau);
-        AfficherPions(window);
-
-        window.display();
     }
 }
 
@@ -189,7 +169,7 @@ void GameManager::NextTurn()
     }
 
     _joueurActuel = (_joueurActuel)%2+1;
-    _etatTour=selectionPion;
+    SetEtat(selectionPion);
     _aManger=false;
 }
 
@@ -228,17 +208,15 @@ bool GameManager::SelectionnerPion(int indX, int indY)
 
     Case* caseCliquee=_plateau.GetCase(indX,indY);
     if(caseCliquee==NULL || caseCliquee->GetEtatCase()!=etatCaseCorrect)
-        if(_plateau.GetCase(indX,indY)->GetEtatCase()!=etatCaseCorrect)
-            return false;
+        return false;
 
     _pionSelectionne=caseCliquee->GetPion();
     if(_pionSelectionne==NULL)
         return false;
+
     _casePionOrigine=caseCliquee;
 
-
-
-    return true;
+    return MasqueCasePion();
 }
 
 bool GameManager::MasqueCasePion()
@@ -284,18 +262,14 @@ bool GameManager::InitDeplacementPion()
 
 bool GameManager::SetCaseAtteignable(std::vector<Case*>* listCaseAtteignable)
 {
-    if(listCaseAtteignable==NULL)
-        return false;
-    _listCaseAtteignable=listCaseAtteignable;
-
     if(_listCaseAtteignable!=NULL)
         delete _listCaseAtteignable;
-
     if(_masqueCaseSelectionnable!=NULL)
         delete _masqueCaseSelectionnable;
 
-    if(listCaseAtteignable->size()<=0)
+    if(listCaseAtteignable==NULL || listCaseAtteignable->size()<=0)
         return false;
+    _listCaseAtteignable=listCaseAtteignable;
 
     _masqueCaseSelectionnable = new sf::VertexArray(sf::Quads,4*_listCaseAtteignable->size());
     for(unsigned int i=0, j=0; i<_masqueCaseSelectionnable->getVertexCount(); i+=4,j++)
@@ -317,7 +291,7 @@ bool GameManager::SelectionnerCase(int indX, int indY)
     if(indX<0||indY<0||indX>=NB_CASE||indY>=NB_CASE)
         return false;
 
-    for(unsigned int i=0; i<_listCaseAtteignable->size();i++)
+    for(unsigned int i=0; i<_listCaseAtteignable->size(); i++)
     {
         if(_plateau.GetCase(indX,indY)==(*_listCaseAtteignable)[i])
         {
@@ -347,43 +321,55 @@ bool GameManager::Manger(int indX, int indY)
     return true;
 }
 
+bool GameManager::BoutDePlateau(Pion* p)
+{
+    if(p==NULL)
+        return false;
+    return (p->GetColor()==sf::Color::White && p->getCase()->GetIndY()==0)
+           || (p->GetColor()==sf::Color::Black && p->getCase()->GetIndY()==NB_CASE-1);
+}
+
 bool GameManager::SetEtat(EtatTour etat)
 {
     if(_etatTour==etat)
         return true;
-
-    if(etat==selectionCase&&_etatTour==selectionPion&&_pionSelectionne!=NULL)
-    {
-        _etatTour=etat;
-        return true;
-    }
-
-    if(etat==selectionPion && _etatTour==selectionCase)
-    {
-        _pionSelectionne=NULL;
-        delete _masqueCaseSelectionnable;
-        _masqueCaseSelectionnable=NULL;
-        delete _masqueCaseActuel;
-        _masqueCaseActuel=NULL;
-        delete _listCaseAtteignable;
-        _listCaseAtteignable=NULL;
-
-        _etatTour=etat;
-
-        return true;
-    }
-
-    if(etat==deplacementPion&&_etatTour==selectionCase&&_listCaseAtteignable!=NULL&&_listCaseAtteignable->size()>0)
-    {
-        _etatTour=etat;
-        return true;
-    }
 
     if(etat==gameOver)
     {
         _etatTour=etat;
         return true;
     }
+
+    if(etat==selectionCase && _listCaseAtteignable!=NULL && _listCaseAtteignable->size()>0)
+    {
+        _etatTour=etat;
+        return true;
+    }
+
+    if(etat==deplacementPion && _etatTour==selectionCase)
+    {
+        _etatTour=etat;
+        return true;
+    }
+
+    if(etat==selectionCase && _etatTour==deplacementPion && _listCaseAtteignable!=NULL && _listCaseAtteignable->size()>0)
+    {
+        _etatTour=etat;
+        return true;
+    }
+
+    if(etat==finTour && _etatTour==deplacementPion)
+    {
+        _etatTour=etat;
+        return true;
+    }
+
+    if(etat==selectionPion && _etatTour==finTour)
+    {
+        _etatTour=etat;
+        return true;
+    }
+
     return false;
 }
 
