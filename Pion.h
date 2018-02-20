@@ -14,6 +14,7 @@ class Pion : public sf::Drawable, public sf::Transformable
 {
     public:
         Pion(int caseX, int caseY, int tailleCase, sf::Color color);
+        Pion(const Pion& p);
         virtual ~Pion();
 
         bool IsAlive(){return _alive;};
@@ -29,7 +30,7 @@ class Pion : public sf::Drawable, public sf::Transformable
 
     protected:
 
-    private:
+    protected:
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
         {
             // on applique la transformation de l'entité -- on la combine avec celle qui a été passée par l'appelant
@@ -44,7 +45,7 @@ class Pion : public sf::Drawable, public sf::Transformable
             target.draw(_shape, states);
         }
 
-    private:
+    protected:
         int _caseX, _caseY;
         sf::Color _color;
         sf::CircleShape _shape;

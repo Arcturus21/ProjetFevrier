@@ -17,6 +17,12 @@ Pion::Pion(int caseX, int caseY, int tailleCase, sf::Color color):
     setPosition(caseX*tailleCase+moitTailleCase,caseY*tailleCase+moitTailleCase);
 }
 
+Pion::Pion(const Pion& p) : _caseX(p._caseX), _caseY(p._caseY), _color(p._color), _shape(p._shape), _alive(true)
+{
+    setOrigin(RAYON_PION,RAYON_PION);
+    setPosition(p.getPosition());
+}
+
 Pion::~Pion()
 {
     //dtor

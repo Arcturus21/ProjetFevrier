@@ -53,7 +53,7 @@ class GameManager
     private:
         int _joueurActuel;
         EtatTour _etatTour;
-        bool _aManger;
+        bool _peutManger;
 
         Plateau _plateau;
 

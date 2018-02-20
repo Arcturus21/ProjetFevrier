@@ -1,8 +1,9 @@
 #include "GameManager.h"
+#include "Dame.h"
 
 using namespace std;
 
-GameManager::GameManager(): _joueurActuel(1), _etatTour(selectionPion),_aManger(false),_pionSelectionne(NULL),
+GameManager::GameManager(): _joueurActuel(1), _etatTour(selectionPion),_peutManger(false),_pionSelectionne(NULL),
     _casePionOrigine(NULL),_masqueCaseActuel(NULL),_listCaseAtteignable(NULL),_masqueCaseSelectionnable(NULL)
 {
     //ctor
@@ -50,6 +51,7 @@ GameManager::~GameManager()
 void GameManager::Play(sf::RenderWindow& window)    ///déroulement de la partie
 {
     _etatTour=selectionPion;
+
     while (window.isOpen())
     {
         sf::Event event;
@@ -83,19 +85,45 @@ void GameManager::Play(sf::RenderWindow& window)    ///déroulement de la partie
                             if(distanceCaseX>=2 || distanceCaseX<=-2)
                             {
                                 Manger(indX-distanceCaseX/2,indY-distanceCaseY/2);
-                                _aManger=SetCaseAtteignable(_pionSelectionne->GetCaseDeplacement(true));
+                                _peutManger=SetCaseAtteignable(_pionSelectionne->GetCaseDeplacement(true));
+                                _casePionOrigine=_pionSelectionne->getCase();
+                                MasqueCasePion();
                             }
 
-                            if(_aManger)
+                            if(_peutManger)
                             {
                                 SetEtat(selectionCase);
                             }
                             else
                             {
-                                /*if(BoutDePlateau(_pionSelectionne))
+                                if(BoutDePlateau(_pionSelectionne))
                                 {
-                                    _pionSelectionne=new Dame(*_pionSelectionne);
-                                }*/
+                                    Dame* d=new Dame(*_pionSelectionne);
+                                    if(d->GetColor()==sf::Color::White)
+                                    {
+                                        for(unsigned int i=0;i<_listPionsBlancs.size();i++)
+                                        {
+                                            if(_listPionsBlancs[i]==_pionSelectionne)
+                                            {
+                                                _listPionsBlancs[i]=d;
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        for(unsigned int i=0;i<_listPionsNoirs.size();i++)
+                                        {
+                                            if(_listPionsNoirs[i]==_pionSelectionne)
+                                            {
+                                                _listPionsNoirs[i]=d;
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    _pionSelectionne->getCase()->SetPion(d);
+                                    _pionSelectionne=d;
+                                }
                                 SetEtat(finTour);
                                 NextTurn();
                             }
@@ -108,7 +136,6 @@ void GameManager::Play(sf::RenderWindow& window)    ///déroulement de la partie
 
             window.draw(_plateau);
             AfficherPions(window);
-
             window.display();
         }
     }
@@ -126,7 +153,7 @@ void GameManager::AfficherPions(sf::RenderTarget& target)
     }
     for(unsigned int i=0; i<_listPionsNoirs.size(); i++)
     {
-        if(_listPionsNoirs[i]==NULL || !_listPionsNoirs[i]->IsAlive())
+        if(_listPionsNoirs[i]==NULL /*|| !_listPionsNoirs[i]->IsAlive()*/)
             continue;
         target.draw(*(_listPionsNoirs[i]));
     }
@@ -159,7 +186,8 @@ void GameManager::NextTurn()
     _listCaseAtteignable=NULL;
     delete _masqueCaseActuel;
     _masqueCaseActuel=NULL;
-    delete _masqueCaseSelectionnable;
+    //if(_masqueCaseSelectionnable!=NULL)
+    //    delete _masqueCaseSelectionnable;
     _masqueCaseSelectionnable=NULL;
 
     if(GameOver())
@@ -170,7 +198,26 @@ void GameManager::NextTurn()
 
     _joueurActuel = (_joueurActuel)%2+1;
     SetEtat(selectionPion);
-    _aManger=false;
+    _peutManger=false;
+
+    for(unsigned int i=0;i<_listPionsBlancs.size();i++)
+    {
+        if(_listPionsBlancs[i]==NULL || !_listPionsBlancs[i]->IsAlive())
+        {
+            delete _listPionsBlancs[i];
+            _listPionsBlancs.erase(_listPionsBlancs.begin()+i);
+            i--;
+        }
+    }
+    for(unsigned int i=0;i<_listPionsNoirs.size();i++)
+    {
+        if(_listPionsNoirs[i]==NULL || !_listPionsNoirs[i]->IsAlive())
+        {
+            delete _listPionsNoirs[i];
+            _listPionsNoirs.erase(_listPionsNoirs.begin()+i);
+            i--;
+        }
+    }
 }
 
 bool GameManager::Selection(int mousePosX, int mousePosY)
