@@ -182,12 +182,17 @@ EtatTour GameManager::GetActionActivated(int indX, int indY)
 void GameManager::NextTurn()
 {
     _pionSelectionne=NULL;
-    delete _listCaseAtteignable;
+
+    if(_listCaseAtteignable!=NULL)
+        delete _listCaseAtteignable;
     _listCaseAtteignable=NULL;
-    delete _masqueCaseActuel;
+
+    if(_masqueCaseActuel!=NULL)
+        delete _masqueCaseActuel;
     _masqueCaseActuel=NULL;
-    //if(_masqueCaseSelectionnable!=NULL)
-    //    delete _masqueCaseSelectionnable;
+
+    if(_masqueCaseSelectionnable!=NULL)
+        delete _masqueCaseSelectionnable;
     _masqueCaseSelectionnable=NULL;
 
     if(GameOver())
@@ -310,9 +315,16 @@ bool GameManager::InitDeplacementPion()
 bool GameManager::SetCaseAtteignable(std::vector<Case*>* listCaseAtteignable)
 {
     if(_listCaseAtteignable!=NULL)
+    {
         delete _listCaseAtteignable;
+        _listCaseAtteignable=NULL;
+    }
+
     if(_masqueCaseSelectionnable!=NULL)
-        delete _masqueCaseSelectionnable;
+    {
+       delete _masqueCaseSelectionnable;
+        _masqueCaseSelectionnable=NULL;
+    }
 
     if(listCaseAtteignable==NULL || listCaseAtteignable->size()<=0)
         return false;

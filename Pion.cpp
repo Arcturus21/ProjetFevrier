@@ -17,7 +17,7 @@ Pion::Pion(int caseX, int caseY, int tailleCase, sf::Color color):
     setPosition(caseX*tailleCase+moitTailleCase,caseY*tailleCase+moitTailleCase);
 }
 
-Pion::Pion(const Pion& p) : _caseX(p._caseX), _caseY(p._caseY), _color(p._color), _shape(p._shape), _alive(true)
+Pion::Pion(const Pion& p) : _caseX(p._caseX), _caseY(p._caseY), _color(p._color), _shape(p._shape), _alive(true), _plateau(p._plateau)
 {
     setOrigin(RAYON_PION,RAYON_PION);
     setPosition(p.getPosition());
@@ -28,7 +28,6 @@ Pion::~Pion()
     //dtor
 }
 
-///A SIMPLIFIER
 std::vector<Case*>* Pion::GetCaseDeplacement(bool manger)
 {
     vector<Case*>* retour=new vector<Case*>();
@@ -51,7 +50,9 @@ std::vector<Case*>* Pion::GetCaseDeplacement(bool manger)
     ///BAS-DROITE
     cTemp=_plateau->GetCase(_caseX+2,_caseY+2); ///Case sur laquelle on place le pion
     cTemp2=_plateau->GetCase(_caseX+1,_caseY+1);    ///Case potentielle du pion adverse
-    if(cTemp!=NULL || cTemp2!=NULL) ///Au cas ou on soit hors plateau ou en cas d'erreur
+    cout << _caseX+1 << " " << _caseY+1 << endl;
+    cout << _caseX+2 << " " << _caseY+2 << endl;
+    if(cTemp!=NULL && cTemp2!=NULL) ///Au cas ou on soit hors plateau ou en cas d'erreur
     {
         if(cTemp2->GetEtatCase()==pionAdverse && cTemp->GetEtatCase()==vide)
         {
