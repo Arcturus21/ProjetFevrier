@@ -25,6 +25,7 @@ Dame::~Dame()
 
 std::vector<Case*>* Dame::GetCaseDeplacement(bool manger)
 {
+    cout << "Dame" << endl;
     vector<Case*>* retour=new vector<Case*>();
     Case *cTemp=NULL;
 

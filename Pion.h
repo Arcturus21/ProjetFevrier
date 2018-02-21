@@ -23,7 +23,7 @@ class Pion : public sf::Drawable, public sf::Transformable
 
         sf::Color GetColor(){return _color;};
 
-        std::vector<Case*>* GetCaseDeplacement(bool manger=false);    ///Manger détermine si le déplacement doit obligatoirement manger un pion adverse
+        virtual std::vector<Case*>* GetCaseDeplacement(bool manger=false);    ///Manger détermine si le déplacement doit obligatoirement manger un pion adverse
 
         void setCase(int caseX,int caseY);
         Case* getCase();

@@ -30,6 +30,7 @@ Pion::~Pion()
 
 std::vector<Case*>* Pion::GetCaseDeplacement(bool manger)
 {
+    cout << "Pion" << endl;
     vector<Case*>* retour=new vector<Case*>();
     Case *cTemp=NULL, *cTemp2=NULL;
 
