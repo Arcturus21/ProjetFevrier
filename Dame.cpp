@@ -25,7 +25,6 @@ Dame::~Dame()
 
 std::vector<Case*>* Dame::GetCaseDeplacement(bool manger)
 {
-    cout << "Dame" << endl;
     vector<Case*>* retour=new vector<Case*>();
     Case *cTemp=NULL;
 
@@ -50,19 +49,19 @@ std::vector<Case*>* Dame::GetCaseDeplacement(bool manger)
         indCActuelY=_caseY+sensY; ///indice actuel de la case
 
         cTemp =_plateau->GetCase(indCActuelX,indCActuelY);       ///Case sur laquelle on est actuellement
-        while(cTemp!=NULL && cTemp->GetEtatCase()!=pionAdverse) ///Tant qu'on a pas rencontré d'ennemi
+        while(cTemp!=NULL && cTemp->GetEtatCase()==vide) ///Tant qu'on a pas rencontré de pion
         {
             indCActuelX+=sensX;
             indCActuelY+=sensY;
             cTemp =_plateau->GetCase(indCActuelX,indCActuelY);   ///Case suivante
         }
-        if(cTemp==NULL) ///Si on est en dehors du plateau, on arrête cette diagonale
-            continue;
+        if(cTemp==NULL || cTemp->GetEtatCase()!=pionAdverse) ///Si on est en dehors du plateau, ou si on tombe sur un pion allié
+            continue;                                        ///on arrête cette diagonale
 
         indCActuelX+=sensX;
         indCActuelY+=sensY;
         cTemp =_plateau->GetCase(indCActuelX,indCActuelY);
-        while(cTemp!=NULL && cTemp->GetEtatCase()!=pionAdverse)  ///On ajoute toutes les cases derrières
+        while(cTemp!=NULL && cTemp->GetEtatCase()==vide)  ///On ajoute toutes les cases derrières
         {
             retour->push_back(cTemp);
             manger=true;
@@ -83,7 +82,7 @@ std::vector<Case*>* Dame::GetCaseDeplacement(bool manger)
             indCActuelY=_caseY+sensY; ///indice actuel de la case
 
             cTemp =_plateau->GetCase(indCActuelX,indCActuelY);
-            while(cTemp!=NULL && cTemp->GetEtatCase()!=pionAdverse)  ///On ajoute toutes les cases derrières
+            while(cTemp!=NULL && cTemp->GetEtatCase()==vide)  ///On ajoute toutes les cases derrières
             {
                 retour->push_back(cTemp);
                 indCActuelX+=sensX;

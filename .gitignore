@@ -1,9 +1,11 @@
 obj
 bin
 openal32.dll
+ProjetFevrier.exe
 ProjetFevrier.cbp
 ProjetFevrier.depend
 ProjetFevrier.layout
 sfml-graphics-2.dll
 sfml-system-2.dll
 sfml-window-2.dll
+sfml-network-2.dll

@@ -49,6 +49,7 @@ class GameManager
 
         bool MasqueCasePion();
         bool InitDeplacementPion();
+        bool TrouverPionManger(int caseOrigineX, int caseOrigineY, int caseArriveX, int caseArriveY, int& casePionMangeX, int& casePionMangeY);
 
     private:
         int _joueurActuel;

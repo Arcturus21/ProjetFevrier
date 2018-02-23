@@ -80,11 +80,12 @@ void GameManager::Play(sf::RenderWindow& window)    ///déroulement de la partie
                         {
                             SetEtat(deplacementPion);
 
-                            int distanceCaseX = indX-_casePionOrigine->GetIndX();
-                            int distanceCaseY = indY-_casePionOrigine->GetIndY();
-                            if(distanceCaseX>=2 || distanceCaseX<=-2)
+                            if(_casePionOrigine==NULL)
+                                continue;
+                            int casePionMangerX=0, casePionMangerY=0;
+                            if(TrouverPionManger(_casePionOrigine->GetIndX(),_casePionOrigine->GetIndY(),indX,indY,casePionMangerX,casePionMangerY))
                             {
-                                Manger(indX-distanceCaseX/2,indY-distanceCaseY/2);
+                                Manger(casePionMangerX,casePionMangerY);
                                 _peutManger=SetCaseAtteignable(_pionSelectionne->GetCaseDeplacement(true));
                                 _casePionOrigine=_pionSelectionne->getCase();
                                 MasqueCasePion();
@@ -177,6 +178,33 @@ EtatTour GameManager::GetActionActivated(int indX, int indY)
         return selectionPion;
     else
         return none;
+}
+
+bool GameManager::TrouverPionManger(int caseOrigineX, int caseOrigineY, int caseArriveX, int caseArriveY, int& casePionMangeX, int& casePionMangeY)
+{
+    int sensX=0,sensY=0;
+    if(caseOrigineX<caseArriveX)
+        sensX=1;
+    else if(caseOrigineX>caseArriveX)
+        sensX=-1;
+    if(caseOrigineY<caseArriveY)
+        sensY=1;
+    else if(caseOrigineY>caseArriveY)
+        sensY=-1;
+
+    casePionMangeX=caseOrigineX+sensX;
+    casePionMangeY=caseOrigineY+sensY;
+    Case* cTemp=_plateau.GetCase(casePionMangeX,casePionMangeY);
+    while(casePionMangeX!=caseArriveX && cTemp!=NULL)       ///Tant qu'on a pas parcouru toutes les cases et qu'on est sur le plateau
+    {
+        if(cTemp->GetEtatCase()!=vide)   ///si la case sur laquelle on est contient un pion
+            return true;
+
+        casePionMangeX+=sensX;
+        casePionMangeY+=sensY;
+        cTemp=_plateau.GetCase(casePionMangeX,casePionMangeY);
+    }
+    return false;
 }
 
 void GameManager::NextTurn()
