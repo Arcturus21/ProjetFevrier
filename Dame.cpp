@@ -94,3 +94,11 @@ std::vector<Case*>* Dame::GetCaseDeplacement(bool manger)
 
     return retour;
 }
+
+void Dame::Afficher(std::ostream &flux) const
+{
+    flux << "Dame " << _indice << ":" << endl
+        << "Couleur : " << ((_color==sf::Color::White)?"Blanc":"Noir") << endl
+        << "Case : " << _caseX << ' ' << _caseY << endl
+        << "Vivant : " << _alive << endl;
+}

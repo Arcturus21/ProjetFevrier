@@ -4,10 +4,14 @@
 
 using namespace std;
 
+int Pion::cptIndice=0;
+
 Pion::Pion(int caseX, int caseY, int tailleCase, sf::Color color):
-    _caseX(caseX), _caseY(caseY), _color(color), _shape(RAYON_PION), _alive(true)
+    _caseX(caseX), _caseY(caseY), _color(color), _shape(RAYON_PION), _alive(true), _indice(cptIndice)
 {
     //ctor
+    cptIndice++;
+
     setOrigin(RAYON_PION,RAYON_PION);
     _shape.setFillColor(color);
     _shape.setOutlineColor(sf::Color(128,128,128));
@@ -15,10 +19,13 @@ Pion::Pion(int caseX, int caseY, int tailleCase, sf::Color color):
 
     int moitTailleCase=tailleCase/2;
     setPosition(caseX*tailleCase+moitTailleCase,caseY*tailleCase+moitTailleCase);
+
+    //cout << _indice << endl;
 }
 
-Pion::Pion(const Pion& p) : _caseX(p._caseX), _caseY(p._caseY), _color(p._color), _shape(p._shape), _alive(true), _plateau(p._plateau)
+Pion::Pion(const Pion& p) : _caseX(p._caseX), _caseY(p._caseY), _color(p._color), _shape(p._shape), _alive(true), _plateau(p._plateau), _indice(p._indice)
 {
+    //cout << _indice << endl;
     setOrigin(RAYON_PION,RAYON_PION);
     setPosition(p.getPosition());
 }
@@ -140,4 +147,71 @@ Case* Pion::getCase()
     if(_plateau==NULL)
         return NULL;
     return _plateau->GetCase(_caseX,_caseY);
+}
+
+///GESTION DES FLUX
+void Pion::Afficher(std::ostream &flux) const
+{
+    flux << "Pion " << _indice << ":" << endl
+        << "Couleur : " << ((_color==sf::Color::White)?"Blanc":"Noir") << endl
+        << "Case : " << _caseX << ' ' << _caseY << endl
+        << "Vivant : " << _alive << endl;
+}
+
+std::ostream& operator<<(std::ostream &flux, Pion const& pion)
+{
+    pion.Afficher(flux);
+    return flux;
+}
+
+
+///GESTION DES PACKETS
+
+void Pion::Transmettre(sf::Packet &packet) const
+{
+    packet << _indice << _color << _caseX << _caseY << _alive << getPosition();
+}
+
+void Pion::Recevoir(sf::Packet &packet)
+{
+    sf::Vector2f pos;
+    packet >> _indice >> _color >> _caseX >> _caseY >> _alive >> pos;
+    setPosition(pos);
+}
+
+sf::Packet& operator <<(sf::Packet& packet, const Pion& pion)
+{
+    pion.Transmettre(packet);
+    return packet;
+}
+
+sf::Packet& operator >>(sf::Packet& packet, Pion& pion)
+{
+    pion.Recevoir(packet);
+    return packet;
+}
+
+
+sf::Packet& operator <<(sf::Packet& packet, const sf::Color color)
+{
+    packet << color.r << color.g << color.b << color.a;
+    return packet;
+}
+
+sf::Packet& operator >>(sf::Packet& packet, sf::Color color)
+{
+    packet >> color.r >> color.g >> color.b >> color.a;
+    return packet;
+}
+
+sf::Packet& operator <<(sf::Packet& packet, const sf::Vector2f vector2)
+{
+    packet << vector2.x << vector2.y;
+    return packet;
+}
+
+sf::Packet& operator >>(sf::Packet& packet, sf::Vector2f vector2)
+{
+    packet >> vector2.x >> vector2.y;
+    return packet;
 }

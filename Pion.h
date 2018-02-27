@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <SFML/Graphics.hpp>
+#include <SFML/Network.hpp>
 
 #define RAYON_PION 15
 
@@ -27,6 +28,14 @@ class Pion : public sf::Drawable, public sf::Transformable
 
         void setCase(int caseX,int caseY);
         Case* getCase();
+
+
+        ///GESTION DES FLUX
+        virtual void Afficher(std::ostream &flux) const;
+
+        ///GESTION DES PACKETS
+        void Transmettre(sf::Packet &packet) const;
+        void Recevoir(sf::Packet &packet);
 
     protected:
 
@@ -53,6 +62,22 @@ class Pion : public sf::Drawable, public sf::Transformable
         bool _alive;
 
         Plateau* _plateau;
+
+        int _indice;
+
+    private:
+        static int cptIndice;
 };
+
+std::ostream& operator<<(std::ostream &flux, Pion const& pion);
+
+sf::Packet& operator <<(sf::Packet& packet, const Pion& pion);
+sf::Packet& operator >>(sf::Packet& packet, Pion& pion);
+
+///GESTION FLUX SFML SPECIFIC
+sf::Packet& operator <<(sf::Packet& packet, const sf::Color color);
+sf::Packet& operator >>(sf::Packet& packet, sf::Color color);
+sf::Packet& operator <<(sf::Packet& packet, const sf::Vector2f vector2);
+sf::Packet& operator >>(sf::Packet& packet, sf::Vector2f vector2);
 
 #endif // PION_H

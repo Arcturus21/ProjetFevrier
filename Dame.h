@@ -13,6 +13,8 @@ class Dame : public Pion
 
         std::vector<Case*>* GetCaseDeplacement(bool manger=false);
 
+        void Afficher(std::ostream &flux) const;
+
     protected:
 
     private:
